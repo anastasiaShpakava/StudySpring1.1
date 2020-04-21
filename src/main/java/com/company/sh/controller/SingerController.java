@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping ("/singers")
 public class SingerController {
-    @Autowired
-    private SingerService singerService;
+   @Autowired
+
 }
