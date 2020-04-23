@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 import java.util.Objects;
 
-@Slf4j
+//@Slf4j
 @Controller
 @RequestMapping ("/singers")
 public class SingerController {
@@ -30,7 +30,7 @@ public class SingerController {
     public String getSinger (@PathVariable Integer id, Model model) {
       Singer singer = singerService.findSinger(id);
         if (Objects.isNull(singer)) {
-            log.error("Singer with such ID not found. ", id);
+       //     log.error("Singer with such ID not found. ", id);
         }
         model.addAttribute("singer", singer);
         return "director";
