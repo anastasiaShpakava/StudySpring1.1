@@ -21,7 +21,7 @@ public class SingerService {
 
 
     public List<Singer> getAllSingers() {
-        return (List<Singer>) singerRepository.findAll();
+        return  singerRepository.findAll();
     }
 
     public Singer findSinger(Integer id) {
