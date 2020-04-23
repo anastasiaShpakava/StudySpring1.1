@@ -14,7 +14,7 @@ public class CompositionService {
         this.compositionRepository = compositionRepository;
     }
     public List<Composition> getAllCompositions() {
-        return (List<Composition>) compositionRepository.findAll();
+        return  compositionRepository.findAll();
     }
 
     public Composition findComposition(Integer id) {
@@ -22,6 +22,6 @@ public class CompositionService {
     }
 
     public Composition  findCompositionBySingerId(Integer id) {
-        return compositionRepository.findById(id).orElse(null);
+        return (Composition) compositionRepository.findBySingerId(id);
     }
 }
