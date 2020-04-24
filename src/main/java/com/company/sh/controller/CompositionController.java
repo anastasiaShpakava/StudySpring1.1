@@ -23,6 +23,8 @@ public class CompositionController {
         model.addAttribute("songs", compositions);
         return "allSongs";
     }
+
+
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String findById(@PathVariable Integer id, Model model) {
         Composition composition=compositionService.findComposition(id);
