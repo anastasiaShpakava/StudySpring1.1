@@ -26,6 +26,7 @@ public class SingerController {
         model.addAttribute("singers", singers);
         return "directors";
     }
+
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String getSinger (@PathVariable Integer id, Model model) {
       Singer singer = singerService.findSinger(id);
