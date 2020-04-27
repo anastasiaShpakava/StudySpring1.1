@@ -1,5 +1,10 @@
 <html>
+<head>
+    <title>
+        Test Application
+    </title>
+</head>
 <body>
-<h2>Hello World!</h2>
+
 </body>
 </html>
