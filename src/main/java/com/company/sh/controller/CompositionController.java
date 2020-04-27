@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -30,5 +31,11 @@ public class CompositionController {
         Composition composition=compositionService.findComposition(id);
         model.addAttribute("song", composition);
         return "selectedSong";
+    }
+    @RequestMapping(value = "/singer", method = RequestMethod.GET)
+    public String findBySinger(@PathVariable @RequestParam("id") Integer id,Model model) {
+        List<Composition> compositions = (List<Composition>) compositionService.findCompositionBySingerId(id);
+        model.addAttribute("songs", compositions);
+        return "forms";
     }
 }

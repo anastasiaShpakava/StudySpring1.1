@@ -21,7 +21,7 @@ public class CompositionService {
         return compositionRepository.findById(id).orElse(null);
     }
 
-//    public Composition  findCompositionBySingerId(Integer id) {
-//        return (Composition) compositionRepository.findBySingerId(id);
-//    }
+    public Composition  findCompositionBySingerId(Integer id) {
+        return (Composition) compositionRepository.findBySingerId(id);
+    }
 }

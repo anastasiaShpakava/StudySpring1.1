@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface CompositionRepository extends JpaRepository <Composition, Integer> {
-  //  @Query("select s from Composition s where s.singer_id.id = ?1")
-  //  List<Composition> findBySingerId(Integer id);
+    @Query("select s from Composition s where s.singer_id.id = ?")
+    List<Composition> findBySingerId(Integer id);
 }
