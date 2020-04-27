@@ -38,4 +38,8 @@ public class CompositionController {
         model.addAttribute("songs", compositions);
         return "forms";
     }
+    @RequestMapping(value = "/songsBySinger", method = RequestMethod.GET)
+    public String getSongs() {
+        return "forms";
+    }
 }
