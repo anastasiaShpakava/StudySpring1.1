@@ -36,10 +36,10 @@ public class CompositionController {
     public String findBySinger(@PathVariable @RequestParam("id") Integer id,Model model) {
         List<Composition> compositions = (List<Composition>) compositionService.findCompositionBySingerId(id);
         model.addAttribute("songs", compositions);
-        return "forms";
+        return "result";
     }
     @RequestMapping(value = "/songsBySinger", method = RequestMethod.GET)
     public String getSongs() {
-        return "forms";
+        return "result";
     }
 }
