@@ -19,7 +19,7 @@ public class CompositionController {
     private CompositionService compositionService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String getMovies(Model model) {
+    public String getSongs(Model model) {
         List<Composition> compositions = compositionService.getAllCompositions();
         model.addAttribute("songs", compositions);
         return "allSongs";
