@@ -32,6 +32,6 @@ public class SingerController {
     public String getSinger (@PathVariable Integer id, Model model) {
       Singer singer = singerService.findSinger(id);
        model.addAttribute("singer", singer);
-        return "director";
+        return "singer";
     }
 }
