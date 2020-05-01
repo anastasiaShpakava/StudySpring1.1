@@ -25,7 +25,7 @@ public class SingerController {
     public String getSingers(Model model) {
         List<Singer> singers = singerService.getAllSingers();
         model.addAttribute("singers", singers);
-        return "directors";
+        return "singers";
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
