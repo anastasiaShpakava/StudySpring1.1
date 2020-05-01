@@ -5,14 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "song")
-public class Composition  {
+public class Song  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

@@ -1,7 +1,7 @@
 package com.company.sh.controller;
 
-import com.company.sh.model.Composition;
-import com.company.sh.service.CompositionService;
+import com.company.sh.model.Song;
+import com.company.sh.service.SongService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,28 +14,28 @@ import java.util.List;
 
 @Controller
 @RequestMapping ("/songs")
-public class CompositionController {
+public class SongController {
     @Autowired
-    private CompositionService compositionService;
+    private SongService songService;
 
     @RequestMapping(method = RequestMethod.GET)
     public String getSongs(Model model) {
-        List<Composition> compositions = compositionService.getAllCompositions();
-        model.addAttribute("songs", compositions);
+        List<Song> songs = songService.getAllSongs();
+        model.addAttribute("songs", songs);
         return "allSongs";
     }
 
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String findById(@PathVariable Integer id, Model model) {
-        Composition composition=compositionService.findComposition(id);
-        model.addAttribute("song", composition);
+       Song song= songService.findSong(id);
+        model.addAttribute("song", song);
         return "selectedSong";
     }
     @RequestMapping(value = "/singer", method = RequestMethod.GET)
     public String findBySinger(@PathVariable @RequestParam("id") Integer id,Model model) {
-        List<Composition> compositions = (List<Composition>) compositionService.findCompositionBySingerId(id);
-        model.addAttribute("songs", compositions);
+        List<Song> songs = (List<Song>) songService.findSongBySingerId(id);
+        model.addAttribute("songs", songs);
         return "result";
     }
     @RequestMapping(value = "/songsBySinger", method = RequestMethod.GET)

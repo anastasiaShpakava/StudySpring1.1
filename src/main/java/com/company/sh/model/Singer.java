@@ -22,7 +22,7 @@ public class Singer {
     private String lastName;
     private Date birthDay;
     @OneToMany(mappedBy = "singer_id", cascade = CascadeType.ALL)
-    private List<Composition> compositions;
+    private List<Song> compositions;
 
 
 }

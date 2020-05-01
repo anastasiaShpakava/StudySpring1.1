@@ -1,10 +1,13 @@
 <div style="text-align: center;">
-    <h10>Welcome!!</h10>
+    <h1>Welcome!</h1>
 </div>
 
 <div>
     <a href="/singers">Singers</a>
 </div>
 <div>
-    <a href="/songs/songsBySinger">These songs are belong to </a>
+    <a href="/songs/songsBySinger">Songs by singer</a>
+</div>
+<div>
+    <a href="/songs">All songs</a>
 </div>

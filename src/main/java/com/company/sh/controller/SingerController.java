@@ -17,6 +17,7 @@ import java.util.List;
 @Controller
 @RequestMapping ("/singers")
 public class SingerController {
+
     @Autowired
     private SingerService singerService;
 
@@ -33,5 +34,4 @@ public class SingerController {
        model.addAttribute("singer", singer);
         return "director";
     }
-
 }
