@@ -12,12 +12,7 @@ import java.util.List;
 @Service
 public class SingerService {
     @Autowired
-    SingerRepository singerRepository;
-
-    public SingerService(SingerRepository singerRepository) {
-        this.singerRepository=singerRepository;
-    }
-
+   private SingerRepository singerRepository;
 
     public List<Singer> getAllSingers() {
         return  singerRepository.findAll();
