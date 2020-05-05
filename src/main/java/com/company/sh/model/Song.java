@@ -10,15 +10,17 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "song")
+
 public class Song  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Singer singer_id;
     private String name;
     private String type;
     private String date;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "singer_id", referencedColumnName = "id")
+    private Singer singer;
+
 
 }

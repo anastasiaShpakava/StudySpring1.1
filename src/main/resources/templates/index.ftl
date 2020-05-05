@@ -5,9 +5,9 @@
 <div>
     <a href="/singers">Singers</a>
 </div>
-<div>
-    <a href="/songs/songsBySinger">Songs by singer</a>
-</div>
-<div>
-    <a href="/songs">All songs</a>
-</div>
+<#--<div>-->
+<#--    <a href="/songs/songsBySinger">Songs by singer</a>-->
+<#--</div>-->
+<#--<div>-->
+<#--    <a href="/songs">All songs</a>-->
+<#--</div>-->

@@ -19,12 +19,12 @@
         <#if singer??>
             ${singer.toString()}
             <div>
-                <#if singer.compositions??>
-                    <#list singer.compositions as composition>
+                <#if singer.songs??>
+                    <#list singer.songs as song>
                         <div>
-                            <a href="/songs/${composition.id}">
-                                ${composition.name}</a>
-                            ${composition.type}
+                            <a href="/songs/${song.id}">
+                                ${song.name}</a>
+                            ${song.type}
 
                         </div>
                     </#list>
@@ -35,7 +35,7 @@
     <br>
     <div>
         <form action="/" method="get">
-            <button type="submit">Back to Main</button>
+            <button type="submit">Back </button>
         </form>
     </div>
 </fieldset>

@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "singer")
+
 public class Singer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,8 +21,7 @@ public class Singer {
     private String firstName;
     private String lastName;
     private Date birthDay;
-    @OneToMany(mappedBy = "singer_id", cascade = CascadeType.ALL)
-    private List<Song> compositions;
-
-
+    @OneToMany(mappedBy = "singer", cascade = CascadeType.ALL)
+    @Column (name = "songs")
+    private List<Song> songs;
 }
