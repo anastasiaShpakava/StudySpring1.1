@@ -33,7 +33,8 @@ public class SongController {
         model.addAttribute("song", song);
         return "selectedSong";
     }
-    @RequestMapping(value = "/singer", method = RequestMethod.GET)
+   
+   @RequestMapping(value = "/singer", method = RequestMethod.GET)
     public String findBySinger(@PathVariable @RequestParam("id") Integer id,Model model) {
         List<Song> songs = (List<Song>) songService.findSongBySingerId(id);
         model.addAttribute("songs", songs);
