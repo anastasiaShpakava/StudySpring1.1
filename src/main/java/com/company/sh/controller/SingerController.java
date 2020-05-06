@@ -1,7 +1,6 @@
 package com.company.sh.controller;
 
 import com.company.sh.model.Singer;
-import lombok.extern.slf4j.Slf4j;
 import com.company.sh.service.SingerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
