@@ -20,6 +20,7 @@ public class Song  {
     private String date;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "singer_id", referencedColumnName = "id")
+
     private Singer singer;
 
 
